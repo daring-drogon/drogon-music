@@ -53,7 +53,17 @@ app.get('/api/albums', (req, res) => {
 })
 
 // post data to albums
-app.post('/api/albums', (req, res) => {
+app.post('/api/albums', [
+    check('album_number')
+    .isLength({min: 4}),
+
+    check('album_name')
+    .isLength({min: 4})
+], (req, res) => {
+    const errors = validationResult(req)
+    if(!errors.isEmpty()){
+        return res.status(400).json({errors: errors.mapped()})
+    }
     albums.create({
             album_number: req.body.album_number,
             album_name: req.body.album_name
