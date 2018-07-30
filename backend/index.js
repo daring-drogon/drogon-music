@@ -129,6 +129,7 @@ const songs = sequelize.define('songs', {
         primaryKey: true,
         autoIncrement: true
     },
+    'album_number': Sequelize.INTEGER,
     'song_name': Sequelize.STRING,
     'mood': Sequelize.STRING,
     'url_song': Sequelize.STRING
@@ -148,6 +149,7 @@ app.get('/api/songs', (req, res) => {
 app.post('/api/songs', (req, res) => {
     songs.create({
             song_number: req.body.song_number,
+            album_number: req.body.album_number,
             song_name: req.body.song_name,
             mood: req.body.mood,
             url_song: req.body.url_song
@@ -165,6 +167,7 @@ app.post('/api/songs', (req, res) => {
 app.put('/api/songs', (req, res) => {
     const update = {
         song_number: req.body.song_number,
+        album_number: req.body.album_number,
         song_name: req.body.song_name,
         mood: req.body.mood,
         url_song: req.body.url_song
