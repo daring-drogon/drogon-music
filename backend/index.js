@@ -137,7 +137,7 @@ app.get('/api/songs', (req, res) => {
 
 
 // post data to songs
-app.get('/api/songs', (req, res) => {
+app.post('/api/songs', (req, res) => {
     songs.create({
             song_number: req.body.song_number,
             song_name: req.body.song_name,
