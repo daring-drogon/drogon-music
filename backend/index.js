@@ -2,7 +2,7 @@ const express = require('express')
 const app = express()
 const bodyParser = require('body-parser')
 
-const Sequelize = Sequelize('sequelize')
+const Sequelize = require('sequelize')
 const sequelize = new Sequelize('musics', 'indra', '1', {
     host: 'localhost',
     dialect: 'mysql',
