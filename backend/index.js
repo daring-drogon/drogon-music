@@ -115,7 +115,7 @@ app.delete('/api/albums/:album_number', (req, res) => {
 
 // =======================================================
 // table songs
-const songs = sequelize.define('song', {
+const songs = sequelize.define('songs', {
     'song_number': {
         type: Sequelize.INTEGER,
         primaryKey: true,
