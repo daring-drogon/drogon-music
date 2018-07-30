@@ -91,23 +91,29 @@ body {
 }
 
 .cn {
-    background-color: black;
-    border: white;
-    color: white;
-    border-radius: 5px;
+    padding: 7%;
 }
 
-/* .ml-2,
-.mx-2 {
-    margin-left: 11.5rem !important;
-} */
+li{
+    list-style-type: none;
+    font-size: 22px;
+}
+
 
 .img {
-    /* margin-top: 13%; */
+    margin-top: 13%;
     width: 541px;
     height: 400px;
 }
-
-.img-shadow {
-    width: 100%;
+.card-footer {
+    padding: .75rem 1.25rem;
+    background-color: #C4C4C4;
+    border-top: 0;
 }
+
+.pe {
+    margin-top: 8px;
+    margin-bottom: 1rem;
+}
+
+
