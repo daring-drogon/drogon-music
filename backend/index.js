@@ -145,7 +145,7 @@ app.post('/api/songs', (req, res) => {
             url_song: req.body.url_song
         })
         .then(newSongs => {
-            res.join({
+            res.json({
                 "status": "success",
                 "messages": "songs added",
                 "data": newSongs
