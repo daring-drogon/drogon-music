@@ -1,11 +1,60 @@
-body{
+.mood-nostalgic {
+    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.pexels.com/photos/699782/pexels-photo-699782.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
+}
+
+.mood-joyful {
+    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.pexels.com/photos/40192/woman-happiness-sunrise-silhouette-40192.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
+}
+
+.mood-positive {
+    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.pexels.com/photos/208165/pexels-photo-208165.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
+}
+
+.mood-brokenheart {
+    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.pexels.com/photos/39379/sun-heart-autumn-leaf-39379.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
+}
+
+.mood-emotional {
+    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.pexels.com/photos/160760/smilies-funny-emoticon-faces-160760.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
+}
+
+.mood-inlove {
+    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.pexels.com/photos/887349/pexels-photo-887349.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
+}
+
+.mood-energize {
+    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.pexels.com/photos/761963/pexels-photo-761963.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
+}
+
+.mood-motivated {
+    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.pexels.com/photos/1068523/pexels-photo-1068523.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
+}
+
+.mood-relaxed {
+    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.pexels.com/photos/196666/pexels-photo-196666.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
+}
+
+.jumbotron {
+    background-size: cover;
+    color: white;
+}
+
+body {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
-
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #C4C4C4;
+    color: #6c757d;
+    text-align: center;
+}
 
 .bg-light {
-    background-color: #C4C4C4!important;
+    background-color: #C4C4C4 !important;
 }
 
 .form-control {
@@ -18,12 +67,10 @@ body{
     background-color: black;
     background-clip: padding-box;
     border-radius: .25rem;
-    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
 }
 
-
 .btn {
-
     background-color: black;
     display: inline-block;
     font-weight: 400;
@@ -40,29 +87,24 @@ body{
     font-size: 1rem;
     line-height: 1.5;
     border-radius: .25rem;
-    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+
+.cn {
+    padding: 7%;
+}
+
+li{
+    list-style-type: none;
+    font-size: 22px;
 }
 
 
-.cn{
-    background-color: black;
-    padding: 5%;
-    margin-top: 5%;
-    border: white;
-    color: white;
-    border-radius: 5px;
-}
-
-.ml-2, .mx-2 {
-    margin-left: 11.5rem!important;
-}
-
-.img{
+.img {
     margin-top: 13%;
     width: 541px;
     height: 400px;
 }
-
 .card-footer {
     padding: .75rem 1.25rem;
     background-color: #C4C4C4;
@@ -73,3 +115,5 @@ body{
     margin-top: 8px;
     margin-bottom: 1rem;
 }
+
+

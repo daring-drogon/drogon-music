@@ -13,6 +13,14 @@ const sequelize = new Sequelize('musics', 'indra', '1', {
     }
 });
 
+// setup CORS
+app.use((req, res, next) => {
+    res.header('Access-Control-Allow-Origin', '*')
+    res.header('Access-Control-Allow-Header', 'Origin, X-Requested-With, Content-Type, Accept')
+    next()
+})
+
+
 // body parser for parsing data
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
