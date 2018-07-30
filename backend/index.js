@@ -113,4 +113,74 @@ app.delete('/api/albums/:album_number', (req, res) => {
         })
 })
 
+// =======================================================
+// table songs
+const songs = sequelize.define('song', {
+    'song_number': {
+        type: Sequelize.INTEGER,
+        primaryKey: true,
+        autoIncrement: true
+    },
+    'song_name': Sequelize.STRING,
+    'mood': Sequelize.STRING,
+    'url_song': Sequelize.STRING
+}, {
+    freezeTableName: true
+})
+
+// get all data from songs
+app.get('/api/songs', (req, res) => {
+    songs.findAll().then(songs => {
+        res.json(songs)
+    })
+})
+
+
+// post data to songs
+app.get('/api/songs', (req, res) => {
+    songs.create({
+            song_number: req.body.song_number,
+            song_name: req.body.song_name,
+            url_song: req.body.url_song
+        })
+        .then(newSongs => {
+            res.join({
+                "status": "success",
+                "messages": "songs added",
+                "data": newSongs
+            })
+        })
+})
+
+// edit data sort by song_number
+app.put('/api/songs', (req, res) => {
+    const update = {
+        song_number: req.body.song_number,
+        song_name: req.body.song_name,
+        url_song: req.body.url_song
+    }
+    songs.update(update, {
+            where: {
+                song_number: req.body.song_number
+            }
+        })
+        .then(affectedRow => {
+            return songs.findOne({
+                song_number: req.body.song_number
+            }, {
+                returning: true,
+                where: {}
+            })
+        })
+        .then(DataRes => {
+            res.json({
+                "status": "success",
+                "message": "songs change",
+                "data": DataRes
+            })
+        })
+})
+
+
+
 app.listen(3000, () => console.log('App listen on port 300'))
