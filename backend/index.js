@@ -141,6 +141,7 @@ app.get('/api/songs', (req, res) => {
     songs.create({
             song_number: req.body.song_number,
             song_name: req.body.song_name,
+            mood: req.body.mood,
             url_song: req.body.url_song
         })
         .then(newSongs => {
@@ -157,6 +158,7 @@ app.put('/api/songs', (req, res) => {
     const update = {
         song_number: req.body.song_number,
         song_name: req.body.song_name,
+        mood: req.body.mood,
         url_song: req.body.url_song
     }
     songs.update(update, {
@@ -178,6 +180,31 @@ app.put('/api/songs', (req, res) => {
                 "message": "songs change",
                 "data": DataRes
             })
+        })
+})
+
+app.delete('/api/songs/:song_number', (req, res) => {
+    song_number.destroy({
+            where: {
+                song_number: req.params.emp_no
+            }
+        })
+        .then(affectedRow => {
+            if (affectedRow) {
+                return {
+                    "status": "success",
+                    "messages": "songs deleted",
+                    "data": null
+                }
+            }
+            return {
+                "status": "error",
+                "message": "failed",
+                "data": null
+            }
+        })
+        .then(deleteData => {
+            res.json(deleteData)
         })
 })
 
