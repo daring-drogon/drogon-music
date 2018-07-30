@@ -3,15 +3,6 @@ body{
 }
 
 
-.footer{
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    background-color: #C4C4C4;
-    color: #6c757d;
-    text-align: center;
-}
 
 .bg-light {
     background-color: #C4C4C4!important;
@@ -55,7 +46,7 @@ body{
 
 .cn{
     background-color: black;
-    padding: 9%;
+    padding: 5%;
     margin-top: 5%;
     border: white;
     color: white;
@@ -70,4 +61,15 @@ body{
     margin-top: 13%;
     width: 541px;
     height: 400px;
+}
+
+.card-footer {
+    padding: .75rem 1.25rem;
+    background-color: #C4C4C4;
+    border-top: 0;
+}
+
+.pe {
+    margin-top: 8px;
+    margin-bottom: 1rem;
 }
